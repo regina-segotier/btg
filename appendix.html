@@ -15,18 +15,26 @@
     <meta name="twitter:title" content="Appendix & Data">
     <meta name="twitter:description" content="Explore a decade of philanthropy at The JPB Foundation. Discover grant allocations across program areas, visualize funding data, and track the growth of grants over time.">
 
+    <!-- Favicon and App Icon -->
+    <link rel="preload" as="image" href="assets/images/logo.svg" type="image/svg+xml">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+
+    <!-- Preload critical image assets (Responsive Images) -->
     <link rel="preload" href="assets/images/texture-cropped.webp" as="image" type="image/webp" media="(min-width: 769px)" />
     <link rel="preload" href="assets/images/texture-cropped-sm.webp" as="image" type="image/webp" media="(min-width: 577px) and (max-width: 768px)" />
     <link rel="preload" href="assets/images/texture-xs.webp" as="image" type="image/webp" media="(max-width: 576px)" />
+
+    <!-- Preload CSS first (non-blocking) -->
     <link rel="preload" href="assets/css/theme.css" as="style">
+
+    <!-- Theme Stylesheet (make render-blocking load non-blocking) -->
     <link rel="stylesheet" href="assets/css/theme.css">
-    <link rel="preconnect" href="https://use.typekit.net">
-    <link rel="preconnect" href="https://p.typekit.net">
+
+    <!-- Load Typekit Fonts Asynchronously (non-blocking) -->
     <link rel="stylesheet" href="https://use.typekit.net/aor8pib.css" media="print" onload="this.media='all'; this.onload=null;">
     <noscript><link rel="stylesheet" href="https://use.typekit.net/aor8pib.css"></noscript>
-    <style id="hero-css">
+    <style id="critical-css">
       .hero-section{
         background-image: url('assets/images/texture-cropped.webp');
       }
@@ -121,8 +129,18 @@
             </div>
         </section>
     </main>
-
     <footer id="footer" class="footer"></footer>
+    <script id="critical-js">
+      window.addEventListener('load', () => {
+        const title = document.querySelector('.hero-section__title');
+        if (title) {
+          //title.classList.add('animate', 'fade-up');
+          setTimeout(() => {
+            title.classList.add('visible');
+          }, 300);
+        }
+      });
+    </script>
     <script id="header-footer-js" defer>
         const loadPartial = (url, targetId, method = 'innerHTML') => {
             fetch(url)
