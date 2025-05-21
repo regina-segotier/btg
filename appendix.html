@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+    <title>Appendix & Data</title>
+    <meta name="description" content="Explore a decade of philanthropy at The JPB Foundation. Discover grant allocations across program areas, visualize funding data, and track the growth of grants over time.">
+    
+    <!-- Optional: Open Graph tags for social sharing -->
+    <meta property="og:title" content="Appendix & Data">
+    <meta property="og:description" content="Explore a decade of philanthropy at The JPB Foundation. Discover grant allocations across program areas, visualize funding data, and track the growth of grants over time.">
+    <meta property="og:type" content="website">
+
+    <!-- Optional: Twitter Card tags -->
+    <meta name="twitter:title" content="Appendix & Data">
+    <meta name="twitter:description" content="Explore a decade of philanthropy at The JPB Foundation. Discover grant allocations across program areas, visualize funding data, and track the growth of grants over time.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+    <link rel="preload" href="assets/images/texture-cropped.webp" as="image" type="image/webp" media="(min-width: 769px)" />
+    <link rel="preload" href="assets/images/texture-cropped-sm.webp" as="image" type="image/webp" media="(min-width: 577px) and (max-width: 768px)" />
+    <link rel="preload" href="assets/images/texture-xs.webp" as="image" type="image/webp" media="(max-width: 576px)" />
+    <link rel="preload" href="assets/css/theme.css" as="style">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="preconnect" href="https://p.typekit.net">
+    <link rel="stylesheet" href="https://use.typekit.net/aor8pib.css" media="print" onload="this.media='all'; this.onload=null;">
+    <noscript><link rel="stylesheet" href="https://use.typekit.net/aor8pib.css"></noscript>
+    <style id="hero-css">
+      .hero-section{
+        background-image: url('assets/images/texture-cropped.webp');
+      }
+
+      @media (max-width: 767px) {
+        .hero-section{
+          background-image: url('assets/images/texture-cropped-sm.webp');
+        }
+      }
+
+      @media (max-width: 576px) {
+        .hero-section{
+          background-image: url('assets/images/texture-xs.webp');
+        }
+      }
+    </style>
+</head>
+<body data-theme="green">
+    <header id="header" class="header">
+      <div class="container menu-container">
+        <div class="logo-container">
+          <div class="logo-wrap">
+            <a href="index.html">
+              <img src="assets/images/logo.svg" alt="Beyond the Grant logo" class="logo colored" width="212" height="15">
+              <img src="assets/images/logo-white.svg" alt="Beyond the Grant logo white" class="logo white" width="212" height="15" loading="lazy" decoding="async" style="display: none;">
+            </a>
+          </div>
+        </div>
+        <button id="menu-toggle" class="menu-toggle" aria-label="Toggle Menu">
+          <span class="toggle-bar">
+            <span class="line"></span>
+          </span>
+        </button>
+      </div>
+      <!-- Full-Screen Menu -->
+      <div id="menu-overlay" class="menu-overlay">
+    </header>
+    <main class="site-main" role="main">
+        <section class="hero-section subhero" role="banner">
+            <div class="container hero-section__container center">
+
+              <div class="hero-section__content">
+                <h1 class="hero-section__title animate fade-up">
+                  Appendix <br/>& Data
+                </h1>
+              </div>
+
+            </div>
+        </section>
+        <section>
+            <div class="container wide">
+                <div class="section-header animate fade-up">
+                    <h2>Grant Dollars per Program Area</h2>
+                </div>
+                <div class="chart-block doughnut">
+                    <div class="chart-container">
+                        <canvas id="grantChart" width="600" height="600"></canvas>
+                        <div class="shade"></div>
+                        <div class="textureOverlay"></div>
+                        <div class="chartTotal"><label>Total:</label>$2,724,716,396</div>
+                    </div>
+                    <div class="custom-legend" id="legendContainer"></div>
+                </div>
+            </div>
+        </section>
+
+         <section>
+            <div class="container wide">
+                <div class="section-header animate fade-up">
+                    <h2>Grant Dollars Over Time</h2>
+                </div>
+                <div class="chart-block bar-chart">
+                    <div class="chart-container">
+                        <canvas id="bchart1" width="680" height="400"></canvas>
+                        <div class="chartTotal relative bottom">Total: $2,724,716,396</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <section>
+            <div class="container wide">
+                <div class="section-header animate fade-up">
+                    <h2>Number of Grants Over Time</h2>
+                </div>
+                <div class="chart-block bar-chart">
+                    <div class="chart-container">
+                        <canvas id="bchart2" width="680" height="400"></canvas>
+                        <div class="chartTotal relative bottom">Total: 3894</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer id="footer" class="footer"></footer>
+    <script id="header-footer-js" defer>
+        const loadPartial = (url, targetId, method = 'innerHTML') => {
+            fetch(url)
+                .then(res => {
+                    if (!res.ok) throw new Error(`${url} - HTTP ${res.status}`);
+                    return res.text();
+                })
+                .then(html => {
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        if (method === 'innerHTML') target.innerHTML = html;
+                        else if (method === 'append') target.insertAdjacentHTML('beforeend', html);
+                    }
+                })
+                .catch(err => console.error(`Error loading ${url}:`, err));
+        };
+
+        loadPartial('partials/header.html', 'menu-overlay');
+        loadPartial('partials/footer.html', 'footer', 'append');
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
+    <script src="assets/js/custom-min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script id="charts" defer>
+    document.addEventListener("DOMContentLoaded", () => {
+        const isMobile = window.innerWidth <= 768;
+
+        const getFontSettings = size => ({
+            color: '#374151',
+            font: { size, family: 'proxima-nova, sans-serif', weight: 700 }
+        });
+
+        // Texture plugin factory reused for all charts
+        const createTexturePlugin = texturePattern => ({
+            id: `texturePlugin`,
+            afterDatasetsDraw(chart) {
+                if (!texturePattern) return;
+                const ctx = chart.ctx;
+                const datasetMeta = chart.getDatasetMeta(0);
+                ctx.save();
+                ctx.globalAlpha = 0.7;
+                datasetMeta.data.forEach(bar => {
+                    const { x, width, y, height } = bar;
+                    ctx.fillStyle = texturePattern;
+                    ctx.fillRect(x - width / 2, y, width, height);
+                });
+                ctx.restore();
+                ctx.globalAlpha = 1.0;
+            }
+        });
+
+        // Lazy load and initialize bar charts with texture
+        const lazyInitializeChart = (canvasId, textureImageSrc, chartColor, data, maxScale, isCurrency, dataSetLabel, stepSize) => {
+            const canvas = document.getElementById(canvasId);
+            if (!canvas) return;
+
+            const observer = new IntersectionObserver((entries, obs) => {
+                for (const entry of entries) {
+                    if (!entry.isIntersecting) continue;
+
+                    const ctx = canvas.getContext('2d');
+                    const img = new Image();
+                    img.src = textureImageSrc;
+                    img.onload = () => {
+                        const texturePattern = ctx.createPattern(img, 'repeat');
+
+                        Chart.register(createTexturePlugin(texturePattern));
+
+                        new Chart(ctx, {
+                            type: 'bar',
+                            data: {
+                                labels: Array.from({ length: 12 }, (_, i) => `${2012 + i}`),
+                                datasets: [{
+                                    label: dataSetLabel,
+                                    data,
+                                    backgroundColor: chartColor,
+                                    borderRadius: 0,
+                                    clip: false
+                                }]
+                            },
+                            options: {
+                                interaction: { mode: 'nearest', intersect: false },
+                                plugins: {
+                                    legend: { display: false },
+                                    tooltip: {
+                                        enabled: true,
+                                        position: 'nearest',
+                                        zIndex: 9999,
+                                        callbacks: {
+                                            label: ({ dataset, raw }) => [
+                                                `${dataset.label}:`,
+                                                isCurrency ? `$${raw.toLocaleString()}` : raw.toLocaleString()
+                                            ]
+                                        }
+                                    }
+                                },
+                                scales: {
+                                    y: {
+                                        beginAtZero: true,
+                                        max: maxScale,
+                                        clip: false,
+                                        ticks: {
+                                            callback: v => v === 0 ? '' : isCurrency ? `$${(v / 1_000_000).toFixed(0)}M` : `${v}`,
+                                            stepSize,
+                                            ...getFontSettings(15)
+                                        },
+                                        grid: {
+                                            color: 'rgba(62,102,148,0.5)',
+                                            drawBorder: false,
+                                            drawTicks: false
+                                        },
+                                        border: { display: false }
+                                    },
+                                    x: {
+                                        clip: false,
+                                        ticks: {
+                                            ...getFontSettings(15),
+                                            padding: 10
+                                        },
+                                        grid: { display: false, drawBorder: false, drawOnChartArea: false, drawTicks: false },
+                                        border: { display: true, color: 'rgba(62,102,148,0.5)', width: 2 }
+                                    }
+                                },
+                                onResize: (chart, size) => {
+                                    const tickSize = size.width < 576 ? 11 : 15;
+                                    chart.options.scales.x.ticks.font.size = tickSize;
+                                    chart.options.scales.y.ticks.font.size = tickSize;
+                                    chart.update();
+                                },
+                                animation: {
+                                    duration: 1000,
+                                    easing: 'easeOutCubic'
+                                }
+                            }
+                        });
+                    };
+
+                    img.onerror = () => console.error("Failed to load texture image.");
+                    obs.unobserve(entry.target);
+                }
+            }, { threshold: isMobile ? 0.2 : 0.5 });
+
+            observer.observe(canvas);
+        };
+
+        // Doughnut chart with texture overlay
+        const doughNut = () => {
+            const labels = ['POVERTY', 'ENVIRONMENT', 'MEDICAL RESEARCH', 'EMERGENCY GRANTS', 'PRESIDENT’S FUND', 'NON-PROGRAM', 'SECTOR SUPPORT'];
+            const data = [1148542592, 953107040, 268508274, 119658770, 114225000, 106255720, 14419000];
+            const colors = ['#F47A5C', '#4AA14C', '#3C84C5', '#F7AC18', '#F491A5', '#2DA7B5', '#CD5078'];
+
+            let chartInitialized = false;
+            const textureImage = new Image();
+            textureImage.src = 'assets/images/texture-cropped.webp';
+
+            const texturePlugin = {
+                id: 'texturePlugin',
+                afterDatasetsDraw(chart) {
+                    if (!texturePattern) return;
+                    const ctx = chart.ctx;
+                    const dataset = chart.getDatasetMeta(0);
+                    ctx.save();
+                    ctx.globalAlpha = 0.6;
+                    dataset.data.forEach(arc => {
+                        const { x, y, innerRadius, outerRadius, startAngle, endAngle } = arc;
+                        ctx.beginPath();
+                        ctx.moveTo(x, y);
+                        ctx.arc(x, y, outerRadius, startAngle, endAngle);
+                        ctx.arc(x, y, innerRadius, endAngle, startAngle, true);
+                        ctx.closePath();
+                        ctx.fillStyle = texturePattern;
+                        ctx.fill();
+                    });
+                    ctx.restore();
+                    ctx.globalAlpha = 1.0;
+                }
+            };
+
+            let texturePattern;
+
+            const initializeChart = () => {
+                if (chartInitialized) return;
+                const ctx = document.getElementById('grantChart').getContext('2d');
+                texturePattern = ctx.createPattern(textureImage, 'repeat');
+
+                new Chart(ctx, {
+                    type: 'doughnut',
+                    data: { labels, datasets: [{ data, backgroundColor: colors, hoverBackgroundColor: colors, borderWidth: 0 }] },
+                    options: {
+                        cutout: '60%',
+                        plugins: {
+                            legend: { display: false },
+                            tooltip: {
+                                callbacks: {
+                                    title: () => '',
+                                    label: ({ dataIndex }) => [`${labels[dataIndex]}:`, `$${data[dataIndex].toLocaleString()}`]
+                                }
+                            }
+                        }
+                    },
+                    plugins: [texturePlugin]
+                });
+
+                const legendContainer = document.getElementById('legendContainer');
+                legendContainer.innerHTML = '';
+                labels.forEach((label, i) => {
+                    const item = document.createElement('div');
+                    item.className = 'legend-item';
+                    item.innerHTML = `
+                        <div class="legend-color" style="background-color: ${colors[i]}"></div>
+                        <div class="wrap"><span class="title">${label}:</span> <span class="price">$${data[i].toLocaleString()}</span></div>
+                    `;
+                    legendContainer.appendChild(item);
+                });
+
+                chartInitialized = true;
+            };
+
+            const observer = new IntersectionObserver(entries => {
+                for (const entry of entries) {
+                    if (!entry.isIntersecting) continue;
+
+                    if (textureImage.complete) initializeChart();
+                    else textureImage.onload = initializeChart;
+
+                    entry.target.closest('.chart-block')?.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            }, { threshold: isMobile ? 0.2 : 0.5 });
+
+            observer.observe(document.getElementById('grantChart'));
+        };
+
+        doughNut();
+        lazyInitializeChart(
+            'bchart1', 'assets/images/texture-cropped.webp', '#2DA7B5',
+            [46873129, 78051333, 117636163, 149203479, 170916664, 206214509, 229072720, 263891499, 359985747, 318798612, 359631836, 424440705],
+            500_000_000, true, "Payment Amount", 100_000_000
+        );
+        lazyInitializeChart(
+            'bchart2', 'assets/images/texture-cropped.webp', '#3E6695',
+            [100, 141, 186, 199, 263, 317, 336, 386, 476, 475, 464, 551],
+            600, false, "Number of Grants", 100
+        );
+    });
+    </script>
+</body>
+</html>

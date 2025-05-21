@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=3.0">
+    <title>Beyond the Grant</title>
+    <meta name="description" content="A Decade of Philanthropy at The JPB Foundation">
+    
+    <!-- Optional: Open Graph tags for social sharing -->
+    <meta property="og:title" content="Beyond the Grant">
+    <meta property="og:description" content="A Decade of Philanthropy at The JPB Foundation">
+    <meta property="og:type" content="website">
+
+    <!-- Optional: Twitter Card tags -->
+    <meta name="twitter:title" content="Beyond the Grant">
+    <meta name="twitter:description" content="A Decade of Philanthropy at The JPB Foundation">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/favicon.png">
+    <link rel="preload" href="assets/css/theme.css" as="style">
+    <link rel="stylesheet" href="assets/css/theme.css">
+    <link rel="preload" href="assets/images/hero/home.webp" as="image">
+    <link rel="preconnect" href="https://use.typekit.net">
+    <link rel="preconnect" href="https://p.typekit.net">
+    <link rel="stylesheet" href="https://use.typekit.net/aor8pib.css">
+</head>
+<body data-theme="green">
+    <header id="header" class="header"></header>
+
+    <script>
+        fetch('partials/header.html')
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error(`HTTP error! Status: ${response.status}`);
+                }
+                return response.text();
+            })
+            .then(data => document.getElementById('header').innerHTML = data)
+            .catch(error => console.error('Error loading header:', error));
+    </script>
+
+     <main class="site-main" role="main">
+        <!-- HERO -->
+        <section class="hero-section" role="banner" style="background-image:url(assets/images/hero/home.jpg);">
+            <div class="container hero-section__container center">
+
+              <div class="hero-section__content">
+                <h1 class="hero-section__title animate fade-up">
+                  <span>Beyond </span>
+                  <span class="light">the</span>
+                  <span>Grant</span>
+                </h1>
+                <p class="hero-section__subtitle animate fade-up">
+                  A Decade of Philanthropy at The JPB Foundation
+                </p>
+              </div>
+
+            </div>
+        </section>
+
+        <!-- SUMMARY -->
+        <section class="bg-blue bg-dark">
+            <div class="container">
+              <div class="summary animate fade-up">
+                <p>Welcome to <i><strong>Beyond the Grant: A Decade of Philanthropy at The JPB Foundation</strong></i>, now the Freedom Together Foundation. This digital report chronicles the first chapter of the foundation’s work—ten years of bold, values-driven philanthropy under the leadership of Barbara Picower. It highlights the history and culture of our Programs and the many lessons learned. We invite you to explore the legacy that continues to shape our future.</p>
+              </div>
+            </div>
+        </section>
+
+        <!-- ACCORDION -->
+        <section class="accordion-section">
+          <div class="container">
+            <div class="section-header animate fade-up">
+              <h2>Introduction</h2>
+            </div>
+              <div class="accordion-items">
+                <div class="accordion-item animate fade-up">
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-1">
+                    <div class="accordion-content">
+                      <h3 class="accordion-title">Foreword by Barbara Picower</h3>
+                      <p class="accordion-quote">“As I reflect on the past decade of leading the JPB Foundation, I am filled with an overwhelming sense of gratitude and pride.”</p>
+                    </div>
+                    <span class="accordion-icon" aria-hidden="true">
+                      <img src="assets/images/icons/accordion.svg" alt="arrow" class="accordion-arrow" />
+                    </span>
+                  </button>
+                  <div id="panel-1" class="accordion-panel" aria-hidden="true">
+                    <p>As I reflect on the past decade of leading the JPB Foundation, I am filled with an overwhelming sense of gratitude and pride for the work we have accomplished together. It has been a privilege to support visionary leaders and organizations that are on the front lines of tackling poverty, advancing racial and gender equity, and building a healthier, more sustainable environment. The progress we’ve made, including over $2.7 billion in grants distributed, is a testament to the power of collaboration and the tireless efforts of our grantees, partners, and allies.</p>
+                    <p>Throughout my time as president and chair of the board, I’ve been continuously inspired by the strength and resilience of those working to create meaningful change. From groundbreaking medical research to reproductive rights and environmental justice, each initiative has been rooted in our shared mission to uplift and amplify the efforts of communities across the United States. While the challenges are immense, I believe the work we’ve done together has built a strong foundation for a more equitable and just society.</p>
+                    <p>I am confident that the future of The JPB Foundation is in excellent hands. Deepak Bhargava has been part of JPB’s success over this past decade as a grantee and then a board member. He brings deep expertise from the field that will help us achieve even more in the next decade.</p>
+                    <p>I look forward to continuing to advise the foundation as president emerita and supporting our work in key areas such as reproductive health and medical research to ensure a lasting impact for generations to come. As you read this report, I hope you are inspired by the resilience and ingenuity of the communities and leaders we’ve had the honor to support. May their stories and accomplishments serve as a reminder of what is possible when we work together toward a more democratic, inclusive, and sustainable future.</p>
+                  </div>
+                </div>
+
+                <div class="accordion-item animate fade-up">
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-2">
+                    <div class="accordion-content">
+                      <h3 class="accordion-title">Foreword by Deepak Bhargava</h3>
+                      <p class="accordion-quote">“The foundation's distinctive approach to philanthropy reflects Barbara's vision and values.”</p>
+                    </div>
+                    <span class="accordion-icon" aria-hidden="true">
+                      <img src="assets/images/icons/accordion.svg" alt="arrow" class="accordion-arrow" />
+                    </span>
+                  </button>
+                  <div id="panel-2" class="accordion-panel" aria-hidden="true">
+                    <p>In early 2023, Barbara Picower left a message on my cell phone, asking me to call her back right away. There was nothing unusual about this. We had worked together closely for a decade when I led Community Change, a grantee of The JPB Foundation. We became and stayed close friends after I left. When I called her back, she asked when we could get together in person—she had something important to talk to me about.</p>
+                    <p>I was totally unprepared for Barbara’s news. She told me that she wanted to step down as president of the foundation. She had recently turned 80 and wanted to work at a slower pace. This surprised me, as she’d always said she wanted to “die at her desk.” Then she looked at me and said, “I’ve found the perfect person to lead the foundation.” As a board member, I was curious: Who might she have in mind? When she told me that she wanted me to become JPB’s next president, I was speechless for several minutes. Barbara said that she saw the struggle to preserve and expand multiracial democracy as the defining issue of our times, and argued that I was the right person to lead the foundation in a new era to meet that challenge.</p>
+                  </div>
+                </div>
+
+                <div class="accordion-item animate fade-up">
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-3">
+                    <div class="accordion-content">
+                      <h3 class="accordion-title">Building the Foundation By senior Staff</h3>
+                      <p class="accordion-quote">“Helping to build the JPB foundation during its formative years has been an extraordinary experience and a significant responsibility.”</p>
+                    </div>
+                    <span class="accordion-icon" aria-hidden="true">
+                      <img src="assets/images/icons/accordion.svg" alt="arrow" class="accordion-arrow" />
+                    </span>
+                  </button>
+                  <div id="panel-3" class="accordion-panel" aria-hidden="true">
+                    <p>Helping to build The JPB Foundation during its formative years has been an extraordinary experience and a significant responsibility. Together with our staff, we brought together diverse perspectives and capabilities toward a common purpose: connecting effective strategies with values and grantmaking that produced tangible results for people and communities. With the trust and support of JPB’s president and board and an exceptional staff, we operated like a start-up, making countless decisions to shape a growing foundation capable of achieving ambitious goals.</p>
+                    <p>Over the years, we saw meaningful progress in our respective areas—Environment, Poverty, and Medical Research—through close collaborations with grantees, partners, and each other. We tackled some of the most pressing challenges of our time, from economic insecurity and a democracy under contest, to extreme energy burdens on disinvested communities, environmental and climate injustice, and brain health and disease. Guided by a shared commitment to systemic change, we uplifted communities and amplified the efforts of those driving change on the ground through innovative approaches and deep partnerships.</p>
+                      <div class="author-notes">
+                        <div class="author-note">
+                          <div class="name">— Dana Bourland</div>
+                          <div class="position">former Senior Vice President of Environment and Strategic Initiatives</div> 
+                          <div class="term">2012–2024</div>
+                        </div>
+                        <div class="author-note">
+                          <div class="name">— Betsy Krebs</div>
+                          <div class="position">former Senior Vice President of Poverty <br/>and current Senior <br/>Vice President</div> 
+                          <div class="term">2014 to present</div>
+                        </div>
+                        <div class="author-note">
+                          <div class="name">— Kevin Lee</div>
+                          <div class="position">Senior Advisor <br/>Medical Research</div> 
+                          <div class="term">2015 to present</div>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+
+                <div class="accordion-item animate fade-up">
+                  <button class="accordion-trigger" aria-expanded="false" aria-controls="panel-4">
+                    <div class="accordion-content">
+                      <h3 class="accordion-title">Author's note By Eric Brown</h3>
+                      <p class="accordion-quote">“I hope the lessons this report contains will be useful for anyone who is interested in doing philanthropy better.”</p>
+                    </div>
+                    <span class="accordion-icon" aria-hidden="true">
+                      <img src="assets/images/icons/accordion.svg" alt="arrow" class="accordion-arrow" />
+                    </span>
+                  </button>
+                  <div id="panel-4" class="accordion-panel" aria-hidden="true">
+                    <p>This report is an attempt to capture the story of The JPB Foundation under Barbara Picower’s tenure as founder, president, and board chair, and to help the field of philanthropy draw as many lessons as it can about what the foundation has done and how it did it. I hope the lessons it contains will be useful for anyone who is interested in doing philanthropy better.</p>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </section>
+
+        <!-- CTA -->
+        <section class="call-to-action">
+            <div class="container">
+                <div class="cta-row animate fade-up">
+                  <div class="column column-image">
+                    <img src="assets/images/ctas/tree-layered.jpg" alt="Tree layered" class="feature-image">
+                  </div>
+                  <div class="column column-content">
+                    <div class="content-wrapper">
+                      <div class="text-content">
+                        <h2 class="section-heading">History & Culture</h2>
+                        <p class="section-description">The origins and early days of the JPB Foundation.</p>
+                      </div>
+                      <a href="history-culture.html" class="cta-btn" aria-label="Read more about History and Culture">Read More</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action">
+            <div class="container">
+                <div class="cta-row reverse animate fade-up">
+                  <div class="column column-image">
+                    <img src="assets/images/ctas/pyramid.jpg" alt="Pyramid" class="feature-image">
+                  </div>
+                  <div class="column column-content">
+                    <div class="content-wrapper">
+                      <div class="text-content">
+                        <h2 class="section-heading">The Programs</h2>
+                        <p class="section-description">Our focus areas: Environment, Medical Research, and Poverty.</p>
+                      </div>
+                      <a href="the-programs.html" class="cta-btn" aria-label="Read more about The Programs">Read More</a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Normal Content -->
+        <section>
+            <div class="container">
+                <div class="section-header animate fade-up">
+                  <h2>Section Header</h2>
+                </div>
+                <div class="text-block animate">
+                    <p>The JPB Foundation was established in 2012 as the result of a bequest from the estate of the late Jeffry Picower. His widow, Barbara Picower, became president of the foundation and chair of the board of the new entity, which was dedicated to supporting medical research, reducing poverty, and protecting the environment.</p>
+                    <p>The couple met in high school in working-class Long Beach, a barrier island off the south shore of Long Island, New York. After graduation, Barbara went to secretarial school and would eventually earn a bachelor’s degree in political science from Hofstra University and master’s degrees in history, secondary education, and nutrition from New York University. Jeffry proceeded to business school, then law school, while also earning an accounting certification. “Jeffry was an enormous talent,” recalls Gerald McNamara, who met Jeffry in 1982 and is JPB’s chief investment officer. “He had an innate sense of where value was—he could see several years into the future.” Jeffry’s investment skills paid off, earning billions, and in 1989, he and Barbara started The Picower Foundation with Barbara as executive director. “Jeffry made the money, and I spent it,” says Barbara, with a smile.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- With Pullquote / Pullfact -->
+        <section>
+            <div class="container">
+                <div class="section-header animate fade-up">
+                  <h2>Section with Pullquote, Pullfact, Pagenav</h2>
+                </div>
+                <div class="text-block animate">
+                  <p>
+                    I have a sense that Barbara might not be thrilled with this chapter, which
+                    may in itself reveal a lot about her. One of Barbara Picower's defining
+                    traits is her reluctance to seek the spotlight. She often told grantees not
+                    to thank her, as it was she who felt grateful to them. Yet any exploration
+                    of The Freedom Together Foundation should start with its founder—her
+                    personality, her working style, and her deep commitment to the individuals
+                    and communities supported by Freedom Together Foundation over the years.
+                  </p>
+                  <div class="pullquote">
+                    <blockquote>
+                        “She's not intimidated or abashed about what other people might think of
+                        her. And she works tirelessly, absolutely running herself ragged to make
+                        it successful.”
+                      </blockquote>
+                      <cite>
+                        — Dr. Jeffrey Friedman, Rockefeller University
+                      </cite>
+                  </div>
+                  <p>
+                    Given the small size of the program staff during the early years, Barbara
+                    created specialized advisory committees to help guide the foundation. These
+                    committees were made up of experts in the field, signaling her seriousness
+                    about the work, and they provided her with access to extremely good
+                    thinking. She drew freely on the wisdom and expertise of these leaders as
+                    well as her leadership team to help guide her, but the final decisions the
+                    foundation made were invariably Barbara's in her capacity as founder, donor,
+                    president, and board chair.
+                  </p>
+                  <p>
+                    She is an indefatigable learner, burying herself in the minutiae of the
+                    work. According to longtime board member Susan Frunzi, “Barbara worked
+                    every day, 18 hours a day, seven days a week, and became a very serious
+                    force in philanthropy.” Barbara was familiar with the work of the
+                    Poverty Program area from her years running The Picower Foundation, but the
+                    Environment Program work was new to her, requiring extra study.
+                  </p>
+                  <div class="pullfact">
+                    <div class="wrap">
+                        <p>The only way to make a significant difference was to work with others—fellow
+                    funders, governments, re-granting intermediaries, and, of course, grantees.</p>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="page-nav animate fade-up">
+                    <a href="the-programs.html">Continue to PROGRAMS</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="pt72 pb72 pt-xs64 pb-xs64">
+            <div class="container">
+                <div class="section-header animate fade-up">
+                  <h2>Section with Subareas</h2>
+                </div>
+                <div class="text-block animate">
+                    <p>As Barbara began to create the structure for The JPB Foundation, she drew on her previous decade From 2012 to 2023, the Environment Program significantly contributed to improving the lives of millions of Americans through close to $1 billion in grants  to enable resilient communities. It did this by investing in organizations and networks that focused on energy, environmental health, environmental justice, and green infrastructure. The Environment Program emerged from an important insight by Barbara, who, after substantial investments in education by The Picower Foundation yielded limited success, declared, “What good is it if Jane can read  if she can’t breathe?”</p>
+                    <p>In 2012, Barbara tapped Dana Bourland to run the program. Dana had spent the previous decade at Enterprise Community Partners, the largest affordable housing and community development intermediary in the country. There, she led environmental strategy and pioneered what remains the nation’s only green building program created for the affordable-housing sector, the Green Communities Initiative. To provide guidance and insight from the field, Barbara also created an Environment Advisory Committee chaired by Harvard climate scientist Dan Schrag.</p>
+                </div>
+
+                <div class="subareas">
+                  <div class="subareas__container">
+                    <h2 class="subareas__heading animate fade-up">Sub Area Heading</h2>
+                    <div class="subareas__grid">
+                      <div class="subareas__btn animate fade-up">Sample</div>
+                      <div class="subareas__btn animate blue fade-up">Sample area with blue background</div>
+                      <div class="subareas__btn animate fade-up">Sample</div>
+                      <div class="subareas__btn animate orange fade-up">Sample area with orange background</div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="text-block animate">
+                    <p>When the foundation created the Environment Program, it did so with a few clear parameters. Understanding that there were other funders working on federal climate policy, it wanted to focus on systems change that would make a meaningful long-term difference in people’s lives—particularly people living in cities and disinvested communities. It also understood that intermediary organizations that were trusted by communities would be important partners to assist in getting funding to the grassroots.</p>
+                </div>
+            </div>
+        </section>
+
+         <section>
+            <div class="container">
+                <div class="section-header animate fade-up">
+                    <h2>Section with Lessons</h2>
+                </div>
+                <div class="text-block animate fade-up">
+                    <p>While this report is certainly interested in what The JPB Foundation did and how they did it, it is just as instructive to understand what the foundation learned. The following mantras guided the growth of the foundation in its first 10 years.</p>
+                    <p>Read on to explore examples and lessons based on each of these phrases.</p>
+                </div>
+                <div id="lessons-menu" class="lesson-grid">
+                  <div class="lesson-grid__container">
+                    <div class="lesson-grid__row">
+                      <a href="#we-cant-do-it-alone" class="lesson-item animate fade-up">
+                        <div class="lesson-item__image-wrapper"> 
+                          <img src="assets/images/icons/lesson1.svg" alt="hands">
+                        </div>
+                        <div class="lesson-item__text">“We can’t <br/>do it <br/>alone.”</div>
+                      </a>
+                      <a href="#philantropy-is-about-taking-risks" class="lesson-item animate fade-up">
+                        <div class="lesson-item__image-wrapper">
+                          <img src="assets/images/icons/lesson2.svg" alt="flying in the clouds">
+                        </div>
+                        <div class="lesson-item__text">“Philanthropy <br/>is about <br/>taking risks.”</div>
+                      </a>
+                      <a href="#well-help-you-swim" class="lesson-item animate fade-up">
+                        <div class="lesson-item__image-wrapper">
+                          <img src="assets/images/icons/lesson3.svg" alt="boat sailing">
+                        </div>
+                        <div class="lesson-item__text">“We'll help <br/>you swim, <br/>not sink.”</div>
+                      </a>
+                      <a href="#we-have-to-talk-about-equity" class="lesson-item animate fade-up">
+                        <div class="lesson-item__image-wrapper">
+                          <img src="assets/images/icons/lesson4.svg" alt="rank">
+                     </div>
+                        <div class="lesson-item__text">“We have to <br/>talk about all <br/>kinds of equity.”</div>
+                      </a>
+                      <a href="#how-dow-know-what-people-need" class="lesson-item animate fade-up">
+                        <div class="lesson-item__image-wrapper">
+                          <img src="assets/images/icons/lesson5.svg" alt="brain">
+                        </div>
+                        <div class="lesson-item__text">“How do we <br/>know what <br/>people need?”</div>
+                      </a>
+                      <a href="#we-want-to-hear" class="lesson-item animate fade-up">
+                        <div class="lesson-item__image-wrapper">
+                          <img src="assets/images/icons/lesson6.svg" alt="weather">
+                        </div>
+                        <div class="lesson-item__text">“We want to hear <br/>the bad as well <br/>as the good.”</div>
+                      </a>
+                      <a href="#so-what" class="lesson-item animate fade-up">
+                        <div class="lesson-item__image-wrapper">
+                          <img src="assets/images/icons/lesson7.svg" alt="raindrop">
+                        </div>
+                        <div class="lesson-item__text">“So what?"</div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+        <section id="we-cant-do-it-alone" class="lesson-section">
+            <div class="container">
+                <div class="lesson-block animate fade-up">
+                    <div class="lesson-block__image">
+                        <img
+                          src="assets/images/icons/lesson1.svg"
+                          alt="hands"
+                        />
+                    </div>
+                    <h2 class="lesson-block__heading animate fade-up">“We can't do it alone”</h2>
+                    <div class="lesson-block__content text-block animate">
+                      <p>
+                        JPB understood the power of partnerships. To be sure, not even the
+                        largest foundation can solve the seemingly intractable problems of
+                        society that JPB was interested in addressing. The only way to make
+                        a significant difference was to work with others—fellow funders,
+                        governments, re-granting intermediaries, and, of course, grantees.
+                      </p>
+                      <p>
+                        Barbara served as the president of the foundation from 2012 until
+                        February 2024, and currently serves as chair of the board. In April
+                        of 2023, she announced that she would step down as president the
+                        following year and would be succeeded by her friend and colleague
+                        Deepak Bhargava, a Freedom Together Foundation board member and
+                        former CEO of Community Change, a longtime grantee of the
+                        foundation.
+                      </p>
+                    </div>
+                </div>
+                <div class="back-to-top-wrapper animate fade-up">
+                    <a href="#lessons-menu" class="back-to-top" aria-label="Back to top">
+                      <span class="back-to-top-text">BACK TO TOP</span>
+                      <div class="back-to-top-icon">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="quote-section__arrow-icon"
+                        >
+                          <path
+                            d="M12 19V5M12 5L5 12M12 5L19 12"
+                            stroke="#3E6695"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section id="philantropy-is-about-taking-risks" class="lesson-section">
+            <div class="container">
+                <div class="lesson-block animate fade-up">
+                    <div class="lesson-block__image">
+                        <img
+                          src="assets/images/icons/lesson2.svg"
+                          alt="flying in the clouds"
+                        />
+                    </div>
+                    <h2 class="lesson-block__heading animate fade-up">“Philanthropy is about taking risks.”</h2>
+                    <div class="lesson-block__content text-block animate">
+                      <p>
+                        JPB understood the power of partnerships. To be sure, not even the largest foundation can solve the seemingly intractable problems of society that JPB was interested in addressing. The only way to make a significant difference was to work with others—fellow funders, governments, re-granting intermediaries, and, of course, grantees.
+                      </p>
+                      <p>
+                        Barbara served as the president of the foundation from 2012 until February 2024, and currently serves as chair of the board. In April of 2023, she announced that she would step down as president the following year and would be succeeded by her friend and colleague Deepak Bhargava, a Freedom Together Foundation board member and former CEO of Community Change, a longtime grantee of the foundation.
+                      </p>
+                    </div>
+                </div>
+                <div class="back-to-top-wrapper animate fade-up">
+                    <a href="#lessons-menu" class="back-to-top" aria-label="Back to top">
+                      <span class="back-to-top-text">BACK TO TOP</span>
+                      <div class="back-to-top-icon">
+                        <svg
+                          width="24"
+                          height="24"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="quote-section__arrow-icon"
+                        >
+                          <path
+                            d="M12 19V5M12 5L5 12M12 5L19 12"
+                            stroke="#3E6695"
+                            stroke-width="2"
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                          ></path>
+                        </svg>
+                      </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <div class="container">
+                <div class="section-header animate fade-up">
+                  <h2>Sample Testimonial</h2>
+                </div>
+                <div class="testimonial animate fade-up">
+                    <div class="content text-block animate">
+                        <p>Barbara Picower devoted nearly every waking hour of the previous decade to JPB and to improving the lives of people who deserve better. While she was surrounded by a highly talented staff and board, she was the driving force behind JPB’s success.</p>
+                        <p>When she announced her plan to step down as president, it was another bold decision. But it was quite consistent with the way she ran the foundation since its creation. She identified areas she cared about and endeavored to go very deep on them. She often provided much more money than grant seekers requested, convinced that they could do more with more. She kept her issue areas fairly narrow, and continued to refine them over time, certain that more money given in more focused ways would be more effective. She almost reflexively shunned the limelight, always placing the focus on the grantee partners and the communities they served.</p>
+                        <p>Her approach was highly personal—she placed an extraordinary amount of stock in her intuition and personal relationships. She identified leaders she trusted and gave them the resources they needed to succeed. She brought on a limited number of key senior staff and empowered them to shape strategies and transform fields. She invited leaders in the field to serve on her board, and she surrounded herself with advisory committees to help her make decisions. While she eagerly took their advice, she only did so after learning as much as she possibly could about a given subject. And she spent nearly every day studying, asking questions, talking, listening, and learning.</p>
+                        <p>This singular approach to philanthropy reached what you might call its apotheosis when Barbara turned to her close friend and trusted colleague, Deepak Bhargava, and determined that the foundation’s future should now rest in his hands. It was an audacious decision, but hardly an inconsistent one. She was narrowing her focus, concentrating her resources, putting trust in close colleagues, and following her gut. A classic Barbara move, if you will.</p>
+                        <p>The fullness of Barbara’s legacy, as well as the fruits of her team’s labors, will unfold in its own time and in its own way. What is clear is that as JPB evolves under its new mission and carries out its updated program strategies, it will always embody the values of its founder.</p>
+                    </div>
+                    <div class="author animate fade-up">
+                        —Eric Brown, November 2024
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACKNOWLEDGEMENTS -->
+        <section>
+            <div class="container">
+                <div class="acknowledgements animate fade-up">
+                    <div class="content text-block animate">
+                        <p>Among the hallmarks of The JPB Foundation was its highly talented albeit extremely lean staff, small board of trustees, and teams of long time advisors. Although we are not listing names here, we appreciate the ways everyone contributed to making the work of JPB possible. Thank you to all of those who have been part of this journey.</p>
+                        <p>Over the past decade, JPB supported hundreds of organizations to reduce poverty, build a healthier, more sustainable environment, advance medical research, and further racial and gender equity. Only a very small set of those organizations are featured in this report.</p>
+                    </div>
+                    <div class="credits animate fade-up">
+                      <div class="written-by">Report Written by Eric Brown</div>
+                      <div class="illustrations-by">Illustrations by Nicholas Ogonosky</div>
+                    </div>
+                </div>
+            </div>
+        </section> 
+
+    </main>
+
+    <footer id="footer" class="footer"></footer>
+    <script>
+    fetch('partials/footer.html')
+        .then(response => response.ok ? response.text() : Promise.reject(response.status))
+        .then(data => {
+            const footer = document.getElementById('footer');
+            if (footer) {
+                footer.insertAdjacentHTML('beforeend', data);
+            }
+        });
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="assets/js/custom-min.js" defer></script>
+</body>
+</html>
